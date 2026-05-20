@@ -1,0 +1,33 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+bin/
+out/
+.settings/
+.project
+.classpath
+
+# Run directories and logs
+run/
+logs/
+*.log
+
+# Temp/Decompiled Files
+tmp_*/
+cfr-*.jar
+*.java
+
+# Keep the actual source code intact
+!src/**/*.java
+
+# Keep libs folder if used for dependencies
+!libs/

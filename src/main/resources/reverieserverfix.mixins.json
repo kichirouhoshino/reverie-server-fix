@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.roddy.reverieserverfix.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "EffekUnitsMixin",
+    "PlayerEventListenersMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
