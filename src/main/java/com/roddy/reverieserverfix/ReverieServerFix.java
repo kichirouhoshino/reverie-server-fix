@@ -24,7 +24,7 @@ public class ReverieServerFix {
 
     public ReverieServerFix() {
         MinecraftForge.EVENT_BUS.register(this);
-        LOGGER.info("[ReverieServerFix] Loaded — client-side class crashes on dedicated server will be caught and logged.");
+        LOGGER.info("[ReverieServerFix] Loaded.");
     }
 
     @SubscribeEvent

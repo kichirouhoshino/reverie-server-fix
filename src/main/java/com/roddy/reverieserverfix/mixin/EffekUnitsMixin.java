@@ -2,6 +2,7 @@ package com.roddy.reverieserverfix.mixin;
 
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.loading.FMLEnvironment;
+import com.hm.efn.util.EffekUnits;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -19,7 +20,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  * This mixin intercepts VFXENABLE() and forces it to return false on the server,
  * preventing the crashes at the root cause with zero performance overhead.
  */
-@Mixin(targets = "com.hm.efn.util.EffekUnits", remap = false)
+@Mixin(value = EffekUnits.class, remap = false)
 public class EffekUnitsMixin {
 
     @Inject(method = "VFXENABLE", at = @At("HEAD"), cancellable = true, remap = false)

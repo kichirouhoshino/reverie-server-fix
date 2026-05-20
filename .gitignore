@@ -30,4 +30,12 @@ cfr-*.jar
 !src/**/*.java
 
 # Keep libs folder if used for dependencies
-!libs/
+libs/
+
+# External files and debugging artifacts
+*.log
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+/*.java
+tmp/
+tmp_*/
