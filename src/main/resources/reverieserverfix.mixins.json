@@ -7,7 +7,9 @@
   "mixins": [
     "EffekUnitsMixin",
     "PlayerEventListenersMixin",
-    "BookOfDragonsMixin"
+    "BookOfDragonsMixin",
+    "CataclysmDimensionModMixin",
+    "HangingEntityMixin"
   ],
   "client": [],
   "injectors": {

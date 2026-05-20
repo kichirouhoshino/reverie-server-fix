@@ -4,8 +4,11 @@
 
 ## Fixes
 - **Epic Fight Nightfall crash fix:** Fixed crashes caused by Epic Fight Nightfall loading client-side visual effects on the server.
-- **Cataclysm Dimension Teleport Fix:** Fix players unable to TPA into a cataclysm dimension when there are still players in it. The game showed a misleading "Rebuilding..." message when it actually isn't rebuilding it.
+- **Cataclysm Dimension Teleport & Rebuilding Fix:** Resolves the player lockout issue when players die/leave a Cataclysm dimension (like `cataclysm_sanctum_fallen` during a boss fight). Proactively cancels the pending deletion and rebuild countdown when a player attempts to re-enter, allowing immediate return to the arena and preventing files from being deleted under active players.
 - **Book Of Dragons NPE Fix:** Prevents a massive `NullPointerException` stacktrace spam in the server logs caused by dragons attempting to calculate asynchronous paths to null targets.
+- **Cataclysm Dimension Reset Deadlock Fix:** Fixes a severe server freeze where the server would hang indefinitely when a Cataclysm dimension reset occurs, by safely closing active open `RegionFile` handles and clearing the cache before files are deleted.
+- **Invalid Hanging Entity Cleanup:** Prevents repeated server-side hangs caused by broken hanging entities (such as item frames or paintings) ticking in invalid positions and flooding the server with errors.
+
 
 ## Creating the Casket of Reveries server
 
